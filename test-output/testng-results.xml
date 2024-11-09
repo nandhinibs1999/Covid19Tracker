@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-09T13:41:13 IST" name="Default suite" finished-at="2024-11-09T13:41:39 IST" duration-ms="25406">
+    <groups>
+    </groups>
+    <test started-at="2024-11-09T13:41:13 IST" name="Default test" finished-at="2024-11-09T13:41:39 IST" duration-ms="25406">
+      <class name="tests.Covid19TrackerTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.Covid19TrackerTest@6ed3ccb2]" started-at="2024-11-09T13:41:13 IST" name="setUp" finished-at="2024-11-09T13:41:20 IST" duration-ms="6872" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyCovid19TrackerPageLoadsSuccessfully()[pri:0, instance:tests.Covid19TrackerTest@6ed3ccb2]" started-at="2024-11-09T13:41:20 IST" name="verifyCovid19TrackerPageLoadsSuccessfully" finished-at="2024-11-09T13:41:20 IST" duration-ms="27" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCovid19TrackerPageLoadsSuccessfully -->
+        <test-method signature="verifyZoomInButtonClick()[pri:0, instance:tests.Covid19TrackerTest@6ed3ccb2]" started-at="2024-11-09T13:41:20 IST" name="verifyZoomInButtonClick" finished-at="2024-11-09T13:41:22 IST" duration-ms="2126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyZoomInButtonClick -->
+        <test-method signature="verifyZoomOutButtonClick()[pri:0, instance:tests.Covid19TrackerTest@6ed3ccb2]" started-at="2024-11-09T13:41:22 IST" name="verifyZoomOutButtonClick" finished-at="2024-11-09T13:41:24 IST" depends-on-methods="tests.Covid19TrackerTest.verifyZoomInButtonClick" duration-ms="2113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyZoomOutButtonClick -->
+        <test-method signature="verifyDefaultDropdownOption()[pri:0, instance:tests.Covid19TrackerTest@6ed3ccb2]" started-at="2024-11-09T13:41:24 IST" name="verifyDefaultDropdownOption" finished-at="2024-11-09T13:41:25 IST" depends-on-methods="tests.Covid19TrackerTest.verifyZoomOutButtonClick" duration-ms="190" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDefaultDropdownOption -->
+        <test-method signature="verifyStateSelection()[pri:0, instance:tests.Covid19TrackerTest@6ed3ccb2]" started-at="2024-11-09T13:41:25 IST" name="verifyStateSelection" finished-at="2024-11-09T13:41:26 IST" depends-on-methods="tests.Covid19TrackerTest.verifyZoomOutButtonClick" duration-ms="896" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyStateSelection -->
+        <test-method signature="verifyDisplayAllData()[pri:0, instance:tests.Covid19TrackerTest@6ed3ccb2]" started-at="2024-11-09T13:41:26 IST" name="verifyDisplayAllData" finished-at="2024-11-09T13:41:30 IST" depends-on-methods="tests.Covid19TrackerTest.verifyStateSelection" duration-ms="4171" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDisplayAllData -->
+        <test-method signature="verifyHoverAndClickTargetElementTwice()[pri:0, instance:tests.Covid19TrackerTest@6ed3ccb2]" started-at="2024-11-09T13:41:30 IST" name="verifyHoverAndClickTargetElementTwice" finished-at="2024-11-09T13:41:33 IST" depends-on-methods="tests.Covid19TrackerTest.verifyStateSelection" duration-ms="3276" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHoverAndClickTargetElementTwice -->
+        <test-method signature="verifyHoverAndDownloadImage()[pri:0, instance:tests.Covid19TrackerTest@6ed3ccb2]" started-at="2024-11-09T13:41:33 IST" name="verifyHoverAndDownloadImage" finished-at="2024-11-09T13:41:38 IST" depends-on-methods="tests.Covid19TrackerTest.verifyStateSelection" duration-ms="5258" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Image was not downloaded successfully. expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Image was not downloaded successfully. expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at tests.Covid19TrackerTest.verifyHoverAndDownloadImage(Covid19TrackerTest.java:97)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHoverAndDownloadImage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Covid19TrackerTest@6ed3ccb2]" started-at="2024-11-09T13:41:38 IST" name="tearDown" finished-at="2024-11-09T13:41:39 IST" duration-ms="309" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.Covid19TrackerTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
